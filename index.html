@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Complexity Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+    <div class="floating-particles" id="particles"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>AI Code Complexity Visualizer</h1>
+            <p>Analyze your code's complexity with beautiful interactive visualizations</p>
+        </div>
+
+        <div class="input-section">
+            <div class="code-input-container">
+                <textarea class="code-input" id="codeInput" placeholder="Paste your code here for analysis..."></textarea>
+                <div class="sample-codes">
+                    <div class="sample-btn" onclick="loadSample('fibonacci')">Fibonacci</div>
+                    <div class="sample-btn" onclick="loadSample('sorting')">Sorting Algorithm</div>
+                    <div class="sample-btn" onclick="loadSample('recursive')">Recursive Function</div>
+                    <div class="sample-btn" onclick="loadSample('complex')">Complex Logic</div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <select class="language-selector" id="languageSelect">
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="cpp">C++</option>
+                    <option value="csharp">C#</option>
+                </select>
+                <button class="analyze-btn" onclick="analyzeCode()">
+                    🔍 Analyze Code
+                </button>
+            </div>
+        </div>
+
+        <div class="results-container" id="resultsContainer" style="display: none;">
+            <div class="metrics-panel">
+                <h3 class="panel-title">📊 Complexity Metrics</h3>
+                <div id="metricsContent"></div>
+            </div>
+            
+            <div class="visualization-panel">
+                <h3 class="panel-title">🌐 Complexity Graph</h3>
+                <div class="complexity-viz" id="complexityViz"></div>
+            </div>
+        </div>
+
+        <div class="insights-section" id="insightsSection" style="display: none;">
+            <h3 class="panel-title">💡 AI Insights & Recommendations</h3>
+            <div id="insightsContent"></div>
+        </div>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
