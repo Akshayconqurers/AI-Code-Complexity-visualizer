@@ -11,5 +11,5 @@ An interactive web application that analyzes code complexity and creates beautif
 ## Demo
 [Location](https://github.com/Akshayconqurers/AI-Code-Complexity-visualizer)
 
-[LIVE DEMO](http://127.0.0.1:5500)
+<img width="1888" height="893" alt="image" src="https://github.com/user-attachments/assets/82710f2c-915e-44f8-afbb-842180868442" />
 
